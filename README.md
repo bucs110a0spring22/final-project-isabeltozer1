@@ -16,7 +16,7 @@
 
 ## Project Description *(Software Lead)*
 
-<< Give an overview of your project >>
+<< Our final project is going to be an interactive game in which the player picks an avatar to be a climber and a level and ascends a rock climbing slope. The player will click on the holds associated with their level (color coded and varying distances depending on level). There is a that restarts after timer after each new hold the climber moves to. If the player waits too long the climber will get too tired and fall off. If the player chooses a hold too far away they will fall off. The player wins by reaching the top! >>
 
 ***    
 
@@ -25,13 +25,15 @@
 * << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
 * << You should also have a screenshot of each screen for your final GUI >>
+* ![IMG_20220412_235333449](IMG_20220412_235333449.jpg)
+* ![IMG_20220412_235328264](IMG_20220412_235328264.jpg)
 
 ***        
 
 ## Program Design *(Backend Specialist)*
 
 * Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
+    * pymunk is a non-standard library we are using for physics with the falling climber motion
     * For each additional module you should include
         * url for the module documentation
         * a short description of the module
