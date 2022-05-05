@@ -1,4 +1,4 @@
-import pygame
+import pygame #this is going to be a button
 
 class Hold(pygame.sprite.Sprite):
   def__init__(self,pos,fn): #pos is position, a tuple with x, y coordinates
