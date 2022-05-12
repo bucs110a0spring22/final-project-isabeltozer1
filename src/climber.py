@@ -1,3 +1,4 @@
+import pygame
 #climber, arms legs, body
 #Climber class that has list of all the individual body parts
 #  Arm
