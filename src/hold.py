@@ -11,7 +11,9 @@ class Hold(pygame.sprite.Sprite):
   #self.rect.x = pos[0]
   #self.rect.y = pos[0] #top left of screen
     #distribute holds randomly
-    #as game coding progresses: have color-coded levels of holds
+    #as game coding progresses: have color-coded levels of holds\
+
+    
 
 
 #will need to add updated for button
