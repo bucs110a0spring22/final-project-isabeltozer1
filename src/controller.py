@@ -1,9 +1,8 @@
 import pygame
-#import random
-#from src import hold
+import random
+from src import hold
 from src import climber
-#from src import button
-from src import holds2
+from src import button
 #import src.rockwall
 
 class Controller:
@@ -18,25 +17,15 @@ class Controller:
     pygame.font.init()  # you have to call this at the start, if you want to use this module.
     pygame.key.set_repeat(1, 50)  # initialize a held keey to act as repeated key strikes
 
-    #self.holds = pygame.sprite.Group()
-    #num_holds = 20
-    #for i in range(num_holds):
-    #    x = random.randrange(40, 600)
-    #    y = random.randrange(50, 300)
-    #    self.holds.add(hold.Hold(x,y, 'assets/hold.png'))
-    self.hold1 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold2 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold3 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold4 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold5 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold6 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold7 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold8 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold9 = holds2.Hold2(40,600,50,300,'assets/hold.png')
-    self.hold10 = holds2.Hold2(40,600,50,300,'assets/hold.png')
+    self.holds = pygame.sprite.Group()
+    num_holds = 20
+    for i in range(num_holds):
+        x = random.randrange(40, 600)
+        y = random.randrange(50, 300)
+        self.holds.add(hold.Hold(x,y, 'assets/hold.png'))
     self.climber = climber.Climber("Angela", 50, 80, "assets/climber.png")
-    #self.button = #button.Button((250,250),'assets/hold.png')
-    self.all_sprites = pygame.sprite.Group((self.climber,))#,self.hold1,self.hold2,self.hold3,self.hold4,self.hold5,self.hold6,self.hold7,self.hold8,self.hold9,self.hold10)) #+ tuple(self.holds))
+    self.button = button.Button((250,250),'assets/hold.png')
+    self.all_sprites = pygame.sprite.Group((self.climber,self.button,) + tuple(self.holds))
     self.STATE = "game"
      #self.hold = src.holds.Hold((250,250),"hold.png") #hold in center of screen   
      #self.background.fill((211, 211, 211))  # set the background to light grey, for now that's our boulder wall
