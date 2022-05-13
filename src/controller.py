@@ -39,10 +39,10 @@ class Controller:
         self.button18 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
         self.button19 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
         self.button20 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
-        self.current_time = 0
-        self.current_time = pygame.time.get_ticks()
-        self.start_hold_time = 0
-        self.time_holding = 0
+        #self.current_time = 0
+        #self.current_time = pygame.time.get_ticks()
+        #self.start_hold_time = 0
+        #self.time_holding = 0
         pygame.display.flip()
         #self.all_sprites = pygame.sprite.Group((self.climber,self.button1,self.button2,self.button3,self.button4,self.button5))# + tuple(self.holds))
         self.state = "GAME"
@@ -93,7 +93,8 @@ class Controller:
                     #start_hold_time = pygame.time.get_ticks()
                     #time_holding = current_time - start_hold_time
                     #while time_holding > 5000: #holding more than 5 seconds
-                    #  self.climber.falling()
+                    #  self.climber.tired()
+                    
                   elif(self.button2.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button2.rect.x,self.button2.rect.y)
                     #start_hold_time = 0
@@ -174,6 +175,6 @@ class Controller:
                  # self.start_hold_time = pygame.time.get_ticks()
                 #  self.time_holding = current_time - start_hold_time
                 #while self.time_holding > 5000: #holding more than 5 seconds
-                  self.climber.falling()
+                  self.climber.tired()
                   #print(self.climber.fatigue())
                 
