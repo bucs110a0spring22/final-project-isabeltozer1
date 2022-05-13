@@ -18,7 +18,7 @@ class Controller:
         pygame.font.init()  # you have to call this at the start, if you want to use this module.
         pygame.key.set_repeat(1, 50)  # initialize a held keey to act as repeated key strikes
         self.rockwall = rockwall.Rockwall(0,0,'assets/rockwall.png')
-        self.climber = climber.Climber("Angela", 300, 200, "assets/climber.png")
+        self.climber = climber.Climber("Angela", 300, 300, "assets/climber.png")
         self.button1 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold.png')
         self.button2 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold.png')
         self.button3 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold.png')
@@ -81,6 +81,7 @@ class Controller:
             current_time = 0
             current_time = pygame.time.get_ticks()
             start_hold_time = 0
+            self.climber.update()
             
             pygame.display.flip()
             for event in pygame.event.get():
@@ -172,9 +173,7 @@ class Controller:
                     #start_hold_time = 0
                     #start_hold_time = pygame.time.get_ticks()
                 if event.type == pygame.KEYDOWN:
-                 # self.start_hold_time = pygame.time.get_ticks()
-                #  self.time_holding = current_time - start_hold_time
-                #while self.time_holding > 5000: #holding more than 5 seconds
-                  self.climber.tired()
-                  #print(self.climber.fatigue())
+                  start_time = pygame.time.get_ticks()
+                  self.climber.fatigue(start_time)
+
                 
