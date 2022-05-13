@@ -173,7 +173,7 @@ class Controller:
                     #start_hold_time = 0
                     #start_hold_time = pygame.time.get_ticks()
                 if event.type == pygame.KEYDOWN:
-                  start_time = pygame.time.get_ticks()
-                  self.climber.fatigue(start_time)
+                    self.climber.tired()
+                  
 
                 
