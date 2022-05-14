@@ -52,6 +52,7 @@ class Controller:
 
     def gameLoop(self):
         while self.state == "GAME":
+            self.num_holds = 0
             self.screen.blit(self.rockwall.image,self.rockwall.rect)
             self.screen.blit(self.climber.image,self.climber.rect)
             self.screen.blit(self.button1.image,self.button1.rect)
@@ -77,96 +78,77 @@ class Controller:
             self.climber.update()
             
             pygame.display.flip()
+          
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
                   if(self.button1.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button1.rect.x,self.button1.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
-                    #time_holding = current_time - start_hold_time
-                    #while time_holding > 5000: #holding more than 5 seconds
-                    #  self.climber.tired()
-                    
+                    self.num_holds +=1
                   elif(self.button2.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button2.rect.x,self.button2.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button3.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button3.rect.x,self.button3.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button4.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button4.rect.x,self.button4.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button5.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button5.rect.x,self.button5.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button6.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button6.rect.x,self.button6.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button7.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button7.rect.x,self.button7.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button8.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button8.rect.x,self.button8.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button9.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button9.rect.x,self.button9.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button10.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button10.rect.x,self.button10.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button11.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button11.rect.x,self.button11.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button12.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button12.rect.x,self.button12.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button13.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button13.rect.x,self.button13.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button14.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button14.rect.x,self.button14.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button15.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button15.rect.x,self.button15.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button16.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button16.rect.x,self.button16.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button17.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button17.rect.x,self.button17.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button18.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button18.rect.x,self.button18.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button19.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button19.rect.x,self.button19.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                   elif(self.button20.rect.collidepoint(event.pos)):
                     self.climber.grab_hold(self.button20.rect.x,self.button20.rect.y)
-                    #start_hold_time = 0
-                    #start_hold_time = pygame.time.get_ticks()
+                    self.num_holds +=1
                 if event.type == pygame.KEYDOWN:
                     self.climber.tired()
+            if self.num_holds >= 5:
+              self.climber.tired()
+            
+              
                   
 
                 
