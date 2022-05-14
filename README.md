@@ -3,6 +3,9 @@
 # Rock Wwall
 ## CS 110 Final Project
 ### Spring 2022
+Sofia Fasullo: Back End Specialist,  
+Isabel Tozer: Software Lead , 
+Angela Chen: Front End Specialist, 
 ### Here we have a climber climbing a rock wall.  The user can click on any holds to move the climber. We originally thought we could use physics and have the climber swing and move according to the laws of physics but that proved to be too high level for us. With what we have submitted now we only have the climber moving through holds and getting tired if the user hits the space bar. In the future we would have wanted to get our timer to work so the climber would be tired over time and fall, and we wanted to get a distance measure to work so the climber couldn't grab holds that were too far. Lastly, we would have wanted to get our screen to show that the user won when the climber reached the top.(https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
 ### Team: Tozer, Fasillo, Chen
@@ -18,7 +21,7 @@ Our final project is an interactive game where the player picks an avatar to be 
 
 ## User Interface Design *(Front End Specialist)*
 
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
+
 * Background of rock wall is the only screen in our program.  The background will have holds randomly scattered on it. We initially wanted a "try again!" text when the hold was too far for the climber to reach, but could not figure that out.
 
 ***        
@@ -26,12 +29,12 @@ Our final project is an interactive game where the player picks an avatar to be 
 ## Program Design *(Backend Specialist)*
 
 * Non-Standard libraries
-    * pymunk is a non-standard library we are using for physics with the falling climber motion
+    * pymunk is a non-standard library we are using for physics with the falling climber motion, we did not end up implementing this however
     * For each additional module you should include
         * url for the module documentation
         * a short description of the module
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). >>
+    * see drawing in assets folder
         * ![class diagram](assets/class_diagram.jpg)
     * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
 * Classes
@@ -89,7 +92,7 @@ We run the code and click on various holds to see if the climber goes to that ho
 | ----------------------|:-------------:| -----------------:| -------------- |
 |  1  | Click "Start" Button  | GUI window appears which screen with 4 climber options w/photos   | Happened as expected.  |
 |  2  | Pick a displayed Climber Avatar  | One of the climbers is selected and will be highlighted, screen changes to show rock wall with holds and climber at bottom . Climber starts at the bottom and can now start Climbing| All of this happened!|
-|  3  | Click on one climber body part (right arm, left arm, right leg or left leg) and drag to a hold button  | Climber moves body part to hold (unless the hold is too far away!), timer starts for 5s countdown), Climber needs to pick a new hold, Climber starts shaking if she doesn't pick a hold fast enough, rock wall scrolls down as climber moves up, this step keeps repeating until reach top or fall | We didn't have time to advance to a multi-part climber, so we kept the climber as one simple image and one rectangle without moving limbs
+|  3  | Click on one climber body part (right arm, left arm, right leg or left leg) and drag to a hold button  | Climber moves body part to hold (unless the hold is too far away!), timer starts for 5s countdown), Climber needs to pick a new hold, Climber starts shaking if she doesn't pick a hold fast enough, rock wall scrolls down as climber moves up, this step keeps repeating until reach top or fall | We didn't have time to advance to a multi-part climber, so we kept the climber as one simple image and one rectangle without moving limbs. Climber only shakes if user presses the spacebar
 |  4  | Click on hold that's too far or click on hold too late  | Climber falls to pad on ground, Screen flashes text "Try again!" Climber respawns at the bottom. Fall count at top right corner goes up by one count.| did not happen, did not input distance between holds
 |  5  | Click on top hold  | Climber moves to top of rock wall, Screen flashes text "You did it!", screen turns to black and "Start" button appears, back to start of game (or if we get sophisticated could go to higher level) |Did not happen, since holds appear randomly could not designate top hold, in the future would pre-code x-y coordinates for all the holds and designate the top hold as the "winner"            
 |  6  | wait to long OR click on hold too far away | Screen flashes text "you fell", Climber falls, game exits, "retry" button appears, back to start | could not implement timer, this did not happen
