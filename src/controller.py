@@ -10,6 +10,7 @@ from src import button
 class Controller:
     def __init__(self, width=640, height=480):
         pygame.init()
+        self.num_holds = 0
         self.width = width
         self.height = height
         self.screen = pygame.display.set_mode((self.width, self.height))
@@ -39,12 +40,7 @@ class Controller:
         self.button18 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
         self.button19 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
         self.button20 = button.Button(random.randrange(10, 630),random.randrange(10, 400),'assets/hold2.png')
-        #self.current_time = 0
-        #self.current_time = pygame.time.get_ticks()
-        #self.start_hold_time = 0
-        #self.time_holding = 0
         pygame.display.flip()
-        #self.all_sprites = pygame.sprite.Group((self.climber,self.button1,self.button2,self.button3,self.button4,self.button5))# + tuple(self.holds))
         self.state = "GAME"
 
     def mainLoop(self):
@@ -78,9 +74,6 @@ class Controller:
             self.screen.blit(self.button18.image,self.button18.rect)
             self.screen.blit(self.button19.image,self.button19.rect)
             self.screen.blit(self.button20.image,self.button20.rect)
-            current_time = 0
-            current_time = pygame.time.get_ticks()
-            start_hold_time = 0
             self.climber.update()
             
             pygame.display.flip()

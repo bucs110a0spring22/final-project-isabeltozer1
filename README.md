@@ -1,16 +1,16 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
-# << Project Title >>
+# Rock Wwall
 ## CS 110 Final Project
-### << Semester, Year >>
-### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
+### Spring 2022
+### Here we have a climber climbing a rock wall.  The user can click on any holds to move the climber. We originally thought we could use physics and have the climber swing and move according to the laws of physics but that proved to be too high level for us.(https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
 << [repl](#) >>
 
 << [link to demo presentation slides](#) >>
 
-### Team: << team name >>
-#### << Team Members >>
+### Team: Tozer, Fasillo, Chen
+#### Sofia Fasillo, Angela Chen, Isabel Tozer
 
 ***
 
@@ -50,29 +50,32 @@ The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * <all of your python files should go here>
+    * Contains all python videos
 * assets
-    * <all of your media, i.e. images, font files, etc, should go here)
+    * Media images
 * etc
-    * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
+    * We do not have a demo video, so we will describe what we wanted to happen here.  We wanted the climber to spawn at the bottom and have coloroful holds appear on the rock wall.  We wanted to climber to move up according to gravity, but we didn't know how to code that so now we have a climber going wherever the user clicks regardless of physics.
 
 ***
 
 ## Tasks and Responsibilities *(Software Lead)*
 
-   * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
+   * Angela Chen got the images from online and uploaded them Sofia wrote the controller.py and the climber.py. She was main lead and delegated tasks
+Isabel wrote the rockwall.py
+Angela wrote the button.py
 
-### Software Lead - << name >>
 
-<< Worked as integration specialist by... >>
+### Software Lead - Isabel Tozer
 
-### Front End Specialist - << name >>
+Software lead wrote ATP, designed the testing strategy.
 
-<< Front-end lead conducted significant research on... >>
+### Front End Specialist - Angela Chen
 
-### Back End Specialist - << name >>
+Front-end lead conducted significant research on how we wanted the game to look.  She uploaded all of the images of the climber, the holds, and the rock wall. If we were more advanced, she would upload multiple sprite images of the climber so we could animate them.
 
-<< The back end specialist... >>
+### Back End Specialist - Sofia Fasullo
+
+The back-end specialist 
 
 ## Testing *(Software Lead)*
 
@@ -83,12 +86,12 @@ The Project is broken down into the following file structure:
 
 | Step   | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
-|  1  | Click "Start" Button  | GUI window appears which screen with 4 climber options w/photos   |          |
-|  2  | Pick a displayed Climber Avatar  | One of the climbers is selected and will be highlighted, screen changes to show rock wall with holds and climber at bottom . Climber starts at the bottom and can now start Climbing|                 |
-|  3  | Click on one climber body part (right arm, left arm, right leg or left leg) and drag to a hold button  | Climber moves body part to hold (unless the hold is too far away!), timer starts for 5s countdown), Climber needs to pick a new hold, Climber starts shaking if she doesn't pick a hold fast enough, rock wall scrolls down as climber moves up, this step keeps repeating until reach top or fall |
-|  4  | Click on hold that's too far or click on hold too late  | Climber falls to pad on ground, Screen flashes text "Try again!" Climber respawns at the bottom. Fall count at top right corner goes up by one count.
-|  5  | Click on top hold  | Climber moves to top of rock wall, Screen flashes text "You did it!", screen turns to black and "Start" button appears, back to start of game (or if we get sophisticated could go to higher level) |                 
-|  6  | wait to long OR click on hold too far away | Screen flashes text "you fell", Climber falls, game exits, "retry" button appears, back to start | 
+|  1  | Click "Start" Button  | GUI window appears which screen with 4 climber options w/photos   | Happened as expected.  |
+|  2  | Pick a displayed Climber Avatar  | One of the climbers is selected and will be highlighted, screen changes to show rock wall with holds and climber at bottom . Climber starts at the bottom and can now start Climbing| All of this happened!|
+|  3  | Click on one climber body part (right arm, left arm, right leg or left leg) and drag to a hold button  | Climber moves body part to hold (unless the hold is too far away!), timer starts for 5s countdown), Climber needs to pick a new hold, Climber starts shaking if she doesn't pick a hold fast enough, rock wall scrolls down as climber moves up, this step keeps repeating until reach top or fall | All of this did work, but the climber did not shake
+|  4  | Click on hold that's too far or click on hold too late  | Climber falls to pad on ground, Screen flashes text "Try again!" Climber respawns at the bottom. Fall count at top right corner goes up by one count.| did not happen
+|  5  | Click on top hold  | Climber moves to top of rock wall, Screen flashes text "You did it!", screen turns to black and "Start" button appears, back to start of game (or if we get sophisticated could go to higher level) |Did not actually happen              
+|  6  | wait to long OR click on hold too far away | Screen flashes text "you fell", Climber falls, game exits, "retry" button appears, back to start | Did not actually happen
 etc...
 
 
